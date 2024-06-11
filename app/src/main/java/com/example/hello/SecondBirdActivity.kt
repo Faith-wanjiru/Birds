@@ -18,11 +18,10 @@ class SecondBirdActivity : AppCompatActivity() {
         binding.btnPrev.setOnClickListener{
             finish()
         }
-        binding.btnNext2.
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+        binding.btnNext2.setOnClickListener{
+            Val intent = Intent(this, ThirdBirdActivity::class.java)
+            startActivity(intent)
         }
+       picasso.get().load("https://images.unsplash.com/photo-1493236296276-d17357e28888?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D").into(
     }
 }
